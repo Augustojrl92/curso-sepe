@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CSS Template</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 0 auto;
+			}
+
+			header {
+				background-color: #666;
+				padding: 10px;
+				text-align: center;
+				color: white;
+			}
+
+			nav {
+				background: #ccc;
+				padding: 20px;
+			}
+
+			nav ul {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			article {
+				padding: 20px;
+				background-color: #f1f1f1;
+			}
+
+			footer {
+				background-color: #777;
+				padding: 10px;
+				text-align: center;
+				color: white;
+			}
+
+			#wrapper {
+				display: grid;
+				grid-template-columns: 800px;
+				grid-template-rows: 95px 300px 75px;
+				grid-row-gap: 0px;
+				justify-content: center;
+			}
+
+			header {
+				grid-column: 1;
+				grid-row: 1;
+			}
+
+			section{
+				display: grid;
+				grid-template-columns: 200px 600px;
+				grid-template-rows: 300px;
+				grid-row: 2;
+				grid-column: 1;
+			}
+
+			section nav{
+				grid-row: 1;
+				grid-column: 1;
+
+			}
+
+			section article{
+				grid-row: 1;
+				grid-column: 2;
+			}
+
+			footer {
+				grid-column: 1;
+				grid-row: 3;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h2>Cities</h2>
+			</header>
+
+			<section>
+				<nav>
+					<ul>
+						<li><a href="#">London</a></li>
+						<li><a href="#">Paris</a></li>
+						<li><a href="#">Tokyo</a></li>
+					</ul>
+				</nav>
+
+				<article>
+					<h1>London</h1>
+					<p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+					<p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+				</article>
+			</section>
+
+			<footer>
+				<p>Footer</p>
+			</footer>
+		</div>
+	</body>
+</html>

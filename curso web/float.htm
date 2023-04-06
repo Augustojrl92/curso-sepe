@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+		#main{
+	        overflow:hidden;
+        }
+		#wrapper{
+        	width:80%;
+            background:red;
+        }
+		#menu{
+	        width:20%;
+	        height:300px;
+	        background:green;   	    
+        }
+		#principal{
+        	width:60%;
+            height:300px;
+            background:blue;            
+        }
+        .flotar{
+        	float:left;
+        }
+        .flota{
+        	float:right;
+        }
+	</style>
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="header">
+		<img src="Food.jpg">
+	</div>
+    <div id="main">
+    	<div id="menu" class="flotar">
+    		<ul>
+    			<li><a id="producto1">leche<a/></li>
+    			<li><a id="producto2">yogur<a/></li>
+    			<li><a id="producto3">queso<a/></li>
+    			<li><a id="producto4">mantequilla<a/></li>
+    		
+    		</ul>
+
+    		
+    		
+		</div>
+		<div id="menu" class="flota">
+    		<ul>
+    			<li><button onclick="one()">1</button></li>
+    			<li><button onclick="one()">1</button></li>
+    			<li><button onclick="one()">1</button></li>
+    			<li><button onclick="one()">1</button></li>
+    			<li><button onclick="one()">1</button></li>
+    			<li><button onclick="one()">1</button></li>
+    		</ul>
+		</div>
+
+    	<div id="principal" class="flotar">
+			Contenido principal
+			<img id="imgVisor">
+    		
+
+
+		</div>
+    </div>
+	<div id="footer">
+    	Footer
+    </div>    
+</div>
+
+<script>	
+			var rutas=['',
+				'leche.jpg',
+				'queso.jpg',
+				'yogur.jpg',
+				'mantequilla.jpg',
+				'ternera.jpg',
+				'cerdo.jpg',
+				'avestruz.jpg',
+				'caballo.jpg',
+				'buey.jpg',
+
+				'pescadoazul.jpg',
+				'pescadoblanco.jpg',
+				'crustaceos.jpg',
+				'congelados.jpg',
+				'cereales.jpg',
+				'verduras.gif',
+				'huevos.jpg',
+				'pasta.jpg',
+				'frutas.jpg'
+				];
+
+			for (x=1;x<=4;x++){
+				document.getElementById("producto" + x).onclick=Entorno(x);
+			}
+		
+			function Entorno(cual){
+				return function(){
+					document.getElementById("imgVisor").src=rutas[cual];
+				}
+			}
+		</script>
+
+</body>
+</html>
